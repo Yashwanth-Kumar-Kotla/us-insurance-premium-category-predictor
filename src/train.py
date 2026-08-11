@@ -5,7 +5,7 @@ The raw dataset (US "Medical Cost Personal" dataset) has a continuous USD
 `charges` column. Since this project predicts a *category* (not an exact
 amount), we bucket `charges` into 4 business bands using quartiles:
 
-    Low  <  Medium  <  High  <  Very High
+Low  <  Medium  <  High  <  Very High
 
 The trained artifact is a single scikit-learn Pipeline (preprocessing +
 classifier), so the FastAPI service only has to call `.predict(...)`.
